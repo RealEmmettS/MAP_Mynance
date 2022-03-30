@@ -59,14 +59,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello NAME " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="kUq-9X-OFf">
+                                <rect key="frame" x="20" y="64" width="374" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="T4K-Av-Jac"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SfN-hg-0fh">
+                                <rect key="frame" x="20" y="244" width="374" height="652"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Yam-FF-Xab">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yam-FF-Xab" id="XHg-CH-emr">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SfN-hg-0fh" secondAttribute="trailing" constant="20" id="9CW-QZ-IJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kUq-9X-OFf" secondAttribute="trailing" constant="20" id="D2R-C9-Oom"/>
+                            <constraint firstItem="SfN-hg-0fh" firstAttribute="top" secondItem="kUq-9X-OFf" secondAttribute="bottom" constant="25" id="F4r-db-Zm9"/>
+                            <constraint firstAttribute="bottom" secondItem="SfN-hg-0fh" secondAttribute="bottom" id="K3N-oz-q2N"/>
+                            <constraint firstItem="kUq-9X-OFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j4l-VZ-1NO"/>
+                            <constraint firstItem="SfN-hg-0fh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="q6Z-Wa-eeP"/>
+                            <constraint firstItem="kUq-9X-OFf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wNe-HV-8W4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zWT-lj-YGa"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="kUq-9X-OFf" id="ozY-w7-UP4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="64"/>
+            <point key="canvasLocation" x="34.782608695652179" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>

@@ -15,6 +15,10 @@ import FirebaseOAuthUI
 import FirebasePhoneAuthUI
 import FirebaseEmailAuthUI
 
+//MARK: Define currentUser Object
+var currentUser:financeUser = financeUser(id: "", fullName: "", firstName: "", lastName: "", email: "")
+
+
 
 class SignIn_ViewController: UIViewController, FUIAuthDelegate {
     
@@ -64,8 +68,8 @@ class SignIn_ViewController: UIViewController, FUIAuthDelegate {
             print("\n\n –– success –– \n\n")
             //userName = getData(documentName: "userInfo")
             guard let user = Auth.auth().currentUser else {return}
-            userID = user.uid
-            userName = user.displayName ?? ""
+            currentUser.id = user.uid
+            currentUser.fullName = user.displayName ?? ""
             performSegue(withIdentifier: "movePastSignIn", sender: nil)
         }else{
             print("\n\n –– error –– \n\n")
@@ -89,10 +93,12 @@ class SignIn_ViewController: UIViewController, FUIAuthDelegate {
                 // Do NOT use this value to authenticate with your backend server,
                 // if you have one. Use getTokenWithCompletion:completion: instead.
                 let uid = user.uid
-                userID = uid
-                let email = user.email
-                updateUser(type: .email, value: user.email!)
-                let photoURL = user.photoURL
+                currentUser.id = uid
+                currentUser.email = user.email ?? ""
+                currentUser.fullName = user.displayName ?? ""
+                currentUser.uploadToCloud()
+                
+                //let photoURL = user.photoURL
                 var multiFactorString = "MultiFactor: "
                 for info in user.multiFactor.enrolledFactors {
                     multiFactorString += info.displayName ?? "[DispayName]"
@@ -102,7 +108,7 @@ class SignIn_ViewController: UIViewController, FUIAuthDelegate {
             }
             
             //MARK: Auto-Retrieve Data
-            db.collection(userID).document("userInfo")
+            db.collection(currentUser.id).document("userInfo")
                 .addSnapshotListener { documentSnapshot, error in
                     guard let document = documentSnapshot else {
                         print("Error fetching document: \(error!)")
@@ -110,12 +116,12 @@ class SignIn_ViewController: UIViewController, FUIAuthDelegate {
                     }
                     guard let data = document.data() else {
                         print("Document data was empty.")
-                        userName = "false"
+                        currentUser.fullName = "false"
                         return
                     }
                     print("Current data: \(data)")
-                    userName = "\(user?.displayName)"
-                    print("\n\n\n\n\nhello \(firstName)\n\n\n\n\n")
+//                    userName = "\(user?.displayName)"
+//                    print("\n\n\n\n\nhello \(firstName)\n\n\n\n\n")
                 }
             
             return true
@@ -142,7 +148,7 @@ class SignIn_ViewController: UIViewController, FUIAuthDelegate {
         do {
             try authUI!.signOut()
             try firebaseAuth.signOut()
-            userID = ""
+            currentUser.clear()
         } catch {
             print("Uh-Oh")
         }

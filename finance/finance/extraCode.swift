@@ -11,34 +11,56 @@ import FirebaseFirestore
 import FirebaseAuth
 import FirebaseAuthUI
 
-//MARK: Global Variables
-var userID = "" {
-    didSet{
-        print("\n\nUser ID: \(userID)\n\n")
-    }
-}
 
-var userName = "" {
-    didSet{
-        print("\n\nUser's Name: \(userName)\n\n")
-        let nonOptional:String = userName.withoutOptional()
-        firstName = nonOptional.components(separatedBy: " ").first!
-    }
-}
-
-var firstName = ""
-
+//MARK: User Struct
 struct financeUser{
-    public var id = ""
-    public var fullName = ""
-    public var firstName = ""
-    public var lastName = ""
-    public var email = ""
+    var id = ""
+    var fullName = "" {
+        didSet{
+            self.firstName = self.fullName.components(separatedBy: " ").first!
+        }
+    }
+    var firstName = ""
+    var lastName = ""
+    var email = ""
+    var financeData:[transaction] = []
+    
+    func uploadToCloud() {
+        if self.fullName != nil || self.fullName != ""{
+            updateUser(type: .name, value: self.fullName)
+        }
+        if self.firstName != nil || self.firstName != ""{
+            updateUser(type: .firstName, value: self.firstName)
+        }
+        if self.email != nil || self.email != ""{
+            updateUser(type: .email, value: self.email)
+        }
+        
+    }
+    
+    func uploadFinanceData() {
+        if self.financeData != nil || self.financeData != []{
+            if Auth.auth().currentUser != nil {
+                db.collection(currentUser.id).document("finances").setData([ "financeData": self.financeData ], merge: true)
+            }
+        }
+    }
+    
+    mutating func clear(){
+        self.id = ""
+        self.fullName = ""
+        self.firstName = ""
+        self.lastName = ""
+        self.email = ""
+    }
 }
 
 var didSignOut = false
 
-
+struct transaction:Equatable {
+    var transactionName:String = ""
+    var transactionAmount:Double = 0.0
+}
 
 
 //MARK: Updating Data
@@ -47,20 +69,21 @@ let db = Firestore.firestore()
 
 enum userInfoType{
     case name
+    case firstName
     case email
-    case working
+    case transaction
 }
 
 func updateUser(type: userInfoType, value: String){
     if Auth.auth().currentUser != nil {
-        db.collection(userID).document("userInfo").setData([ "\(type)": value ], merge: true)
+        db.collection(currentUser.id).document("userInfo").setData([ "\(type)": value ], merge: true)
     }
 }
 
 //MARK: Manually Getting Data
 func getData(documentName: String) -> [String:Any]{
     if Auth.auth().currentUser != nil {
-        let docRef = db.collection(userID).document(documentName)
+        let docRef = db.collection(currentUser.id).document(documentName)
         var returnValue: [String:Any] = ["":""]
         
         docRef.getDocument { (document, error) in
