@@ -23,7 +23,16 @@ struct financeUser{
     var firstName = ""
     var lastName = ""
     var email = ""
-    var financeData:[transaction] = []
+    var financeData:[ [String:Double] ] = [] {
+        didSet{
+            //print("\n\n\n\n\nFINANCEDATA:\n\(self.financeData)\n\n\n\n\n")
+        }
+    }
+    
+    mutating func newTransaction(name:String, amount:Double){
+        self.financeData.append( [name: amount] )
+        uploadFinanceData()
+    }
     
     func uploadToCloud() {
         if self.fullName != nil || self.fullName != ""{
@@ -38,14 +47,6 @@ struct financeUser{
         
     }
     
-    func uploadFinanceData() {
-        if self.financeData != nil || self.financeData != []{
-            if Auth.auth().currentUser != nil {
-                db.collection(currentUser.id).document("finances").setData([ "financeData": self.financeData ], merge: true)
-            }
-        }
-    }
-    
     mutating func clear(){
         self.id = ""
         self.fullName = ""
@@ -56,11 +57,6 @@ struct financeUser{
 }
 
 var didSignOut = false
-
-struct transaction:Equatable {
-    var transactionName:String = ""
-    var transactionAmount:Double = 0.0
-}
 
 
 //MARK: Updating Data
@@ -74,10 +70,29 @@ enum userInfoType{
     case transaction
 }
 
+//Update User Info
 func updateUser(type: userInfoType, value: String){
     if Auth.auth().currentUser != nil {
         db.collection(currentUser.id).document("userInfo").setData([ "\(type)": value ], merge: true)
     }
+}
+
+//Update Finance Data
+func uploadFinanceData(){
+    DispatchQueue.main.async {
+        print("\n\n\n\n\nFINANCEDATA:\n\(currentUser.financeData)\n\n\n\n\n")
+        if Auth.auth().currentUser != nil {
+            if currentUser.financeData != nil || currentUser.financeData != []{
+                db.collection(currentUser.id).document("finances").setData(["financeData" : currentUser.financeData])
+            }
+        }
+    }
+}
+
+struct processed{
+    var name:String
+    var amount:Double
+    var Date: Date
 }
 
 //MARK: Manually Getting Data
@@ -152,7 +167,28 @@ extension Double {
         return (self * divisor).rounded() / divisor
     }
     
-}
+    func withDate() -> String{
+        let date = Date()
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString = df.string(from: date)
+        
+        let numWithDate:String = "\(self)&&&\(dateString)"
+        //print(numWithDate)
+        
+        return numWithDate
+    }
+    
+    /// Rounds the double to decimal places value
+    func roundToPlaces(places:Int) -> Double {
+        let current = self
+        let divisor = pow(10.0, Double(places))
+        let finalNum:Double = (current * divisor).rounded() / divisor
+        
+        return finalNum
+    }
+    
+}//end Double extension
 
 
 
@@ -160,6 +196,18 @@ extension String {
     func toDouble() -> Double? {
         return NumberFormatter().number(from: self)?.doubleValue
     }//end of toDouble()
+    
+    func withDate() -> String{
+        let date = Date()
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString = df.string(from: date)
+        
+        let strWithDate:String = "\(self)&&&\(dateString)"
+        //print(numWithDate)
+        
+        return strWithDate
+    }
     
     func withoutOptional() -> String{
         var string = self
@@ -172,5 +220,24 @@ extension String {
         
         return string
     }//end of withoutOptional()
+    
+    
+    func toDate() -> Date{
+        let rawDate = self
+        let step1 = rawDate.components(separatedBy: " +")
+        let isoDate = step1[0]
+        print(isoDate)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = dateFormatter.date(from:isoDate)!
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
+        
+        let finalDate = calendar.date(from:components)
+        return finalDate!
+    }
     
 }// end of "extension String"
