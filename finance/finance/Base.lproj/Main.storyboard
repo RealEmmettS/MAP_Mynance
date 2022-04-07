@@ -69,9 +69,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SfN-hg-0fh">
-                                <rect key="frame" x="20" y="244" width="374" height="652"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SfN-hg-0fh">
+                                <rect key="frame" x="20" y="244" width="374" height="618"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="ac3-DF-O8a" detailTextLabel="Prk-0a-u9s" style="IBUITableViewCellStyleSubtitle" id="Yam-FF-Xab">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
@@ -96,9 +97,18 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9X-iT-R9c">
+                                <rect key="frame" x="20" y="205" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add New Transaction"/>
+                                <connections>
+                                    <action selector="addNewTransactionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZz-7A-0yU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -106,7 +116,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SfN-hg-0fh" secondAttribute="trailing" constant="20" id="9CW-QZ-IJp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kUq-9X-OFf" secondAttribute="trailing" constant="20" id="D2R-C9-Oom"/>
                             <constraint firstItem="SfN-hg-0fh" firstAttribute="top" secondItem="kUq-9X-OFf" secondAttribute="bottom" constant="25" id="F4r-db-Zm9"/>
-                            <constraint firstAttribute="bottom" secondItem="SfN-hg-0fh" secondAttribute="bottom" id="K3N-oz-q2N"/>
+                            <constraint firstItem="W9X-iT-R9c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ixw-GW-GTk"/>
+                            <constraint firstItem="SfN-hg-0fh" firstAttribute="top" secondItem="W9X-iT-R9c" secondAttribute="bottom" constant="8" symbolic="YES" id="dBg-CE-OXJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W9X-iT-R9c" secondAttribute="trailing" constant="20" id="daK-yL-FRz"/>
+                            <constraint firstItem="SfN-hg-0fh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dee-kT-n0o"/>
                             <constraint firstItem="kUq-9X-OFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j4l-VZ-1NO"/>
                             <constraint firstItem="SfN-hg-0fh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="q6Z-Wa-eeP"/>
                             <constraint firstItem="kUq-9X-OFf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wNe-HV-8W4"/>
@@ -115,6 +128,7 @@
                     <navigationItem key="navigationItem" id="zWT-lj-YGa"/>
                     <connections>
                         <outlet property="nameLabel" destination="kUq-9X-OFf" id="ozY-w7-UP4"/>
+                        <outlet property="newTransactionButton" destination="W9X-iT-R9c" id="8T5-d3-JHs"/>
                         <outlet property="table" destination="SfN-hg-0fh" id="ra4-X2-HfH"/>
                     </connections>
                 </viewController>
@@ -126,6 +140,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

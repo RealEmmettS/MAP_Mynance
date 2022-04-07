@@ -26,11 +26,18 @@ struct financeUser{
     var financeData:[ [String:Double] ] = [] {
         didSet{
             //print("\n\n\n\n\nFINANCEDATA:\n\(self.financeData)\n\n\n\n\n")
+            
         }
     }
     
     mutating func newTransaction(name:String, amount:Double){
-        self.financeData.append( [name: amount] )
+        self.financeData.append( [name.withDate(): amount] )
+        uploadFinanceData()
+    }
+    
+    func removeTransaction(indexNumber index: Int){
+        print("removing data...\n")
+        currentUser.financeData.remove(at: index)
         uploadFinanceData()
     }
     
