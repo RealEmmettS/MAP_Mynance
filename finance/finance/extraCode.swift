@@ -100,7 +100,10 @@ struct processed{
     var name:String
     var amount:Double
     var Date: Date
+    var type:String = ""
 }
+///Available types include: food, service, shopping, software
+let types:[String] = ["food", "service", "shopping", "software"]
 
 //MARK: Manually Getting Data
 func getData(documentName: String) -> [String:Any]{

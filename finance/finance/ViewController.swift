@@ -45,6 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         table.dataSource = self
         table.delegate = self
+        table.allowsSelection = true
         table.layer.cornerRadius = 10
         
         //MARK: Auto-Retrieve Data
@@ -173,7 +174,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         cell.textLabel!.text = tableContent[indexPath.row].name
-        cell.detailTextLabel?.text = "$\(tableContent[indexPath.row].amount)"
+        if tableContent[indexPath.row].type != ""{
+            cell.detailTextLabel?.text = "$\(tableContent[indexPath.row].amount)   |   \(tableContent[indexPath.row].type.capitalized)"
+        }else{
+            cell.detailTextLabel?.text = "$\(tableContent[indexPath.row].amount)"
+        }
+        
+        
+        let type = tableContent[indexPath.row].type
+        switch type{
+        case "food": cell.imageView?.image = UIImage(named: "donut")
+        case "service": cell.imageView?.image = UIImage(named: "Users")
+        case "shopping": cell.imageView?.image = UIImage(named: "Basket")
+        case "software": cell.imageView?.image = UIImage(named: "Layout5")
+        default: cell.imageView?.image = UIImage(named: "Arrow5")
+        }
+        
         
         return cell
         
@@ -181,7 +197,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
+        if tableContent[indexPath.row].type == "" {
+            tableContent[indexPath.row].type = types[0]
+            table.reloadData()
+        }else{
+            let startIndex = types.firstIndex(of: tableContent[indexPath.row].type)
+            let targetIndex = startIndex!+1
+            if targetIndex < types.count{
+                tableContent[indexPath.row].type = types[targetIndex]
+                table.reloadData()
+            }else{
+                tableContent[indexPath.row].type = types[0]
+                table.reloadData()
+            }
+        }
+        
     }
     
     //defines what happens when a user swipes left on a tableView cell

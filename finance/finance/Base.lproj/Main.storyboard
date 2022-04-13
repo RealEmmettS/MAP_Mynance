@@ -70,7 +70,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SfN-hg-0fh">
-                                <rect key="frame" x="20" y="244" width="374" height="618"/>
+                                <rect key="frame" x="20" y="266" width="374" height="596"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
@@ -115,9 +115,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SfN-hg-0fh" secondAttribute="trailing" constant="20" id="9CW-QZ-IJp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kUq-9X-OFf" secondAttribute="trailing" constant="20" id="D2R-C9-Oom"/>
-                            <constraint firstItem="SfN-hg-0fh" firstAttribute="top" secondItem="kUq-9X-OFf" secondAttribute="bottom" constant="25" id="F4r-db-Zm9"/>
+                            <constraint firstItem="SfN-hg-0fh" firstAttribute="top" secondItem="kUq-9X-OFf" secondAttribute="bottom" constant="47" id="F4r-db-Zm9"/>
                             <constraint firstItem="W9X-iT-R9c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ixw-GW-GTk"/>
-                            <constraint firstItem="SfN-hg-0fh" firstAttribute="top" secondItem="W9X-iT-R9c" secondAttribute="bottom" constant="8" symbolic="YES" id="dBg-CE-OXJ"/>
+                            <constraint firstItem="SfN-hg-0fh" firstAttribute="top" secondItem="W9X-iT-R9c" secondAttribute="bottom" constant="30" id="dBg-CE-OXJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W9X-iT-R9c" secondAttribute="trailing" constant="20" id="daK-yL-FRz"/>
                             <constraint firstItem="SfN-hg-0fh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dee-kT-n0o"/>
                             <constraint firstItem="kUq-9X-OFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j4l-VZ-1NO"/>
