@@ -12,12 +12,13 @@ import FirebaseFirestore
 import FirebaseAuth
 import FirebaseAuthUI
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FUIAuthDelegate {
     
     //MARK: @IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var newTransactionButton: UIButton!
+    @IBOutlet weak var signOutButton: UIButton!
     
     var finishedInitialRequest:Bool = false {
         didSet{
@@ -41,12 +42,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableContent = []
         currentUser.financeData = []
         
+        //newTransactionButton.titleLabel?.font =  UIFont(name: "Geliat-Regular", size: 17)
+        
         currentUser.uploadToCloud()
         
         table.dataSource = self
         table.delegate = self
         table.allowsSelection = true
         table.layer.cornerRadius = 10
+        
+        let welcomeText = ("Hello, " + currentUser.firstName)
+        print(welcomeText) // First
+        nameLabel.text = welcomeText
         
         //MARK: Auto-Retrieve Data
         ///This method is constantly listening for data changes on the server, and will run automatically whenever new data is found
@@ -96,11 +103,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //String name = user.getDisplayName();
         let welcomeText = ("Hello, " + currentUser.firstName)
         print(welcomeText) // First
+        //nameLabel.font = UIFont(name: "Genera-Grotesk-Heavy", size: 40)
         nameLabel.text = welcomeText
+        
+        //newTransactionButton.titleLabel?.font =  UIFont(name: "Berka-Regular", size: 17)
         
         getFinanceData()
         
     }
+    
+    
+    
+    //MARK: Sign Out Pressed
+    @IBAction func signOutPressed(_ sender: Any) {
+        let authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        do {
+            try authUI?.signOut()
+        } catch {
+            print("CAN'T SIGN OUT")
+            return
+        }
+        currentUser.clear()
+        performSegue(withIdentifier: "backToSignIn", sender: nil)
+    }
+    
+    
+    
+    
     
     //MARK: Add New Transaction
     @IBAction func addNewTransactionPressed(_ sender: Any) {
@@ -182,13 +212,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         let type = tableContent[indexPath.row].type
-        switch type{
-        case "food": cell.imageView?.image = UIImage(named: "donut")
-        case "service": cell.imageView?.image = UIImage(named: "Users")
-        case "shopping": cell.imageView?.image = UIImage(named: "Basket")
-        case "software": cell.imageView?.image = UIImage(named: "Layout5")
-        default: cell.imageView?.image = UIImage(named: "Arrow5")
-        }
+//        switch type{
+//        case "food": cell.imageView?.image = UIImage(named: "donut")
+//        case "service": cell.imageView?.image = UIImage(named: "Users")
+//        case "shopping": cell.imageView?.image = UIImage(named: "Basket")
+//        case "software": cell.imageView?.image = UIImage(named: "Layout5")
+//        default: cell.imageView?.image = UIImage(named: "Arrow5")
+//        }
         
         
         return cell

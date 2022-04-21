@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Berka-Bold.ttf</string>
+		<string>Berka-Regular.ttf</string>
+		<string>Berka-ExtraBold.ttf</string>
+		<string>Berka-Black.ttf</string>
+		<string>Geliat-Regular.ttf</string>
+		<string>Geliat-Bold.ttf</string>
+		<string>Geliat-Black.ttf</string>
+		<string>Genera-Grotesk-Light.ttf</string>
+		<string>Genera-Grotesk-Heavy.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

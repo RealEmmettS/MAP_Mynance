@@ -10,6 +10,34 @@
 		3A5E029F59D337CDB54403B0 /* Pods_financeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65E83CDD2DB5645B57F3099 /* Pods_financeTests.framework */; };
 		6DDC9754F8412A346F86DC53 /* Pods_finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DFA7FC9CB234CF601D301A /* Pods_finance.framework */; };
 		84F47C414E01BF7093DCF24C /* Pods_finance_financeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7C0FFF6EA56016E49147E8 /* Pods_finance_financeUITests.framework */; };
+		D10AD89B280EF82900F6C9CC /* Geliat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD89A280EF81E00F6C9CC /* Geliat-Regular.ttf */; };
+		D10AD89C280EF82B00F6C9CC /* Geliat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD89A280EF81E00F6C9CC /* Geliat-Regular.ttf */; };
+		D10AD89D280EF82B00F6C9CC /* Geliat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD89A280EF81E00F6C9CC /* Geliat-Regular.ttf */; };
+		D10AD89E280EF82E00F6C9CC /* Berka-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD899280EF7E200F6C9CC /* Berka-Bold.ttf */; };
+		D10AD89F280EF82F00F6C9CC /* Berka-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD899280EF7E200F6C9CC /* Berka-Bold.ttf */; };
+		D10AD8A0280EF82F00F6C9CC /* Berka-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD899280EF7E200F6C9CC /* Berka-Bold.ttf */; };
+		D10AD8A2280EFAA100F6C9CC /* KashIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10AD8A1280EFAA100F6C9CC /* KashIntro.swift */; };
+		D10AD8A9280F1DED00F6C9CC /* Berka-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A8280F1A7200F6C9CC /* Berka-Regular.ttf */; };
+		D10AD8AA280F1DED00F6C9CC /* Berka-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A8280F1A7200F6C9CC /* Berka-Regular.ttf */; };
+		D10AD8AB280F1DEE00F6C9CC /* Berka-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A8280F1A7200F6C9CC /* Berka-Regular.ttf */; };
+		D10AD8AC280F1DF300F6C9CC /* Berka-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A6280F0F2000F6C9CC /* Berka-ExtraBold.ttf */; };
+		D10AD8AD280F1DF300F6C9CC /* Genera-Grotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A3280F0E2500F6C9CC /* Genera-Grotesk-Light.ttf */; };
+		D10AD8AE280F1DF300F6C9CC /* Genera-Grotesk-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A4280F0E2C00F6C9CC /* Genera-Grotesk-Heavy.ttf */; };
+		D10AD8AF280F1DF300F6C9CC /* Berka-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A7280F0F2500F6C9CC /* Berka-Black.ttf */; };
+		D10AD8B0280F1DF300F6C9CC /* Geliat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A5280F0E8100F6C9CC /* Geliat-Black.ttf */; };
+		D10AD8B1280F1DF300F6C9CC /* Berka-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A6280F0F2000F6C9CC /* Berka-ExtraBold.ttf */; };
+		D10AD8B2280F1DF300F6C9CC /* Genera-Grotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A3280F0E2500F6C9CC /* Genera-Grotesk-Light.ttf */; };
+		D10AD8B3280F1DF300F6C9CC /* Genera-Grotesk-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A4280F0E2C00F6C9CC /* Genera-Grotesk-Heavy.ttf */; };
+		D10AD8B4280F1DF300F6C9CC /* Berka-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A7280F0F2500F6C9CC /* Berka-Black.ttf */; };
+		D10AD8B5280F1DF300F6C9CC /* Geliat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A5280F0E8100F6C9CC /* Geliat-Black.ttf */; };
+		D10AD8B6280F1DF300F6C9CC /* Berka-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A6280F0F2000F6C9CC /* Berka-ExtraBold.ttf */; };
+		D10AD8B7280F1DF300F6C9CC /* Genera-Grotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A3280F0E2500F6C9CC /* Genera-Grotesk-Light.ttf */; };
+		D10AD8B8280F1DF300F6C9CC /* Genera-Grotesk-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A4280F0E2C00F6C9CC /* Genera-Grotesk-Heavy.ttf */; };
+		D10AD8B9280F1DF300F6C9CC /* Berka-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A7280F0F2500F6C9CC /* Berka-Black.ttf */; };
+		D10AD8BA280F1DF300F6C9CC /* Geliat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D10AD8A5280F0E8100F6C9CC /* Geliat-Black.ttf */; };
+		D143CC7F28119DCF00FD6D4E /* Geliat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D143CC7E28119DCD00FD6D4E /* Geliat-Bold.ttf */; };
+		D143CC8028119DD000FD6D4E /* Geliat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D143CC7E28119DCD00FD6D4E /* Geliat-Bold.ttf */; };
+		D143CC8128119DD000FD6D4E /* Geliat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D143CC7E28119DCD00FD6D4E /* Geliat-Bold.ttf */; };
 		D1A55CF827ECC16400AB5406 /* extraCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A55CF727ECC16400AB5406 /* extraCode.swift */; };
 		D1D5FBFC27ECB2CB00CD7E55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5FBFB27ECB2CB00CD7E55 /* AppDelegate.swift */; };
 		D1D5FBFE27ECB2CB00CD7E55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5FBFD27ECB2CB00CD7E55 /* SceneDelegate.swift */; };
@@ -53,6 +81,16 @@
 		7DA44F7E2A5728DE012CE6A6 /* Pods-finance-financeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finance-financeUITests.debug.xcconfig"; path = "Target Support Files/Pods-finance-financeUITests/Pods-finance-financeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A97561258313061C46BEC08 /* Pods-financeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-financeTests.release.xcconfig"; path = "Target Support Files/Pods-financeTests/Pods-financeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B65E83CDD2DB5645B57F3099 /* Pods_financeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_financeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10AD899280EF7E200F6C9CC /* Berka-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Berka-Bold.ttf"; sourceTree = "<group>"; };
+		D10AD89A280EF81E00F6C9CC /* Geliat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geliat-Regular.ttf"; sourceTree = "<group>"; };
+		D10AD8A1280EFAA100F6C9CC /* KashIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashIntro.swift; sourceTree = "<group>"; };
+		D10AD8A3280F0E2500F6C9CC /* Genera-Grotesk-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Genera-Grotesk-Light.ttf"; sourceTree = "<group>"; };
+		D10AD8A4280F0E2C00F6C9CC /* Genera-Grotesk-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Genera-Grotesk-Heavy.ttf"; sourceTree = "<group>"; };
+		D10AD8A5280F0E8100F6C9CC /* Geliat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geliat-Black.ttf"; sourceTree = "<group>"; };
+		D10AD8A6280F0F2000F6C9CC /* Berka-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Berka-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D10AD8A7280F0F2500F6C9CC /* Berka-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Berka-Black.ttf"; sourceTree = "<group>"; };
+		D10AD8A8280F1A7200F6C9CC /* Berka-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Berka-Regular.ttf"; sourceTree = "<group>"; };
+		D143CC7E28119DCD00FD6D4E /* Geliat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geliat-Bold.ttf"; sourceTree = "<group>"; };
 		D1A55CF727ECC16400AB5406 /* extraCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extraCode.swift; sourceTree = "<group>"; };
 		D1D5FBF827ECB2CB00CD7E55 /* finance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D5FBFB27ECB2CB00CD7E55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +162,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D10AD898280EF7B400F6C9CC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D10AD8A8280F1A7200F6C9CC /* Berka-Regular.ttf */,
+				D10AD899280EF7E200F6C9CC /* Berka-Bold.ttf */,
+				D10AD8A6280F0F2000F6C9CC /* Berka-ExtraBold.ttf */,
+				D10AD8A7280F0F2500F6C9CC /* Berka-Black.ttf */,
+				D10AD89A280EF81E00F6C9CC /* Geliat-Regular.ttf */,
+				D143CC7E28119DCD00FD6D4E /* Geliat-Bold.ttf */,
+				D10AD8A5280F0E8100F6C9CC /* Geliat-Black.ttf */,
+				D10AD8A3280F0E2500F6C9CC /* Genera-Grotesk-Light.ttf */,
+				D10AD8A4280F0E2C00F6C9CC /* Genera-Grotesk-Heavy.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		D1D5FBEF27ECB2CA00CD7E55 = {
 			isa = PBXGroup;
 			children = (
@@ -152,11 +206,13 @@
 				D1D5FBFB27ECB2CB00CD7E55 /* AppDelegate.swift */,
 				D1D5FBFD27ECB2CB00CD7E55 /* SceneDelegate.swift */,
 				D1D5FBFF27ECB2CB00CD7E55 /* ViewController.swift */,
+				D10AD8A1280EFAA100F6C9CC /* KashIntro.swift */,
 				D1D5FC6B27ECB9B500CD7E55 /* SignIn-ViewController.swift */,
 				D1A55CF727ECC16400AB5406 /* extraCode.swift */,
 				D1D5FC0127ECB2CB00CD7E55 /* Main.storyboard */,
 				D1D5FC0427ECB2CD00CD7E55 /* Assets.xcassets */,
 				D1D5FC2B27ECB2F000CD7E55 /* INSTRUCTIONS */,
+				D10AD898280EF7B400F6C9CC /* Fonts */,
 				D1D5FC0627ECB2CD00CD7E55 /* LaunchScreen.storyboard */,
 				D1D5FC0927ECB2CD00CD7E55 /* Info.plist */,
 				D1D5FC3027ECB72A00CD7E55 /* GoogleService-Info.plist */,
@@ -303,12 +359,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10AD8AD280F1DF300F6C9CC /* Genera-Grotesk-Light.ttf in Resources */,
+				D10AD89E280EF82E00F6C9CC /* Berka-Bold.ttf in Resources */,
 				D1D5FC0827ECB2CD00CD7E55 /* LaunchScreen.storyboard in Resources */,
+				D10AD8AC280F1DF300F6C9CC /* Berka-ExtraBold.ttf in Resources */,
+				D10AD8B0280F1DF300F6C9CC /* Geliat-Black.ttf in Resources */,
+				D10AD8A9280F1DED00F6C9CC /* Berka-Regular.ttf in Resources */,
 				D1D5FC2F27ECB2F000CD7E55 /* Mynance.docx in Resources */,
 				D1D5FC0527ECB2CD00CD7E55 /* Assets.xcassets in Resources */,
+				D10AD89B280EF82900F6C9CC /* Geliat-Regular.ttf in Resources */,
+				D10AD8AE280F1DF300F6C9CC /* Genera-Grotesk-Heavy.ttf in Resources */,
+				D143CC7F28119DCF00FD6D4E /* Geliat-Bold.ttf in Resources */,
 				D1D5FC0327ECB2CB00CD7E55 /* Main.storyboard in Resources */,
 				D1D5FC2E27ECB2F000CD7E55 /* Mynance FAQ.docx in Resources */,
 				D1D5FC3127ECB72A00CD7E55 /* GoogleService-Info.plist in Resources */,
+				D10AD8AF280F1DF300F6C9CC /* Berka-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +381,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10AD89F280EF82F00F6C9CC /* Berka-Bold.ttf in Resources */,
+				D10AD8B2280F1DF300F6C9CC /* Genera-Grotesk-Light.ttf in Resources */,
+				D10AD8B3280F1DF300F6C9CC /* Genera-Grotesk-Heavy.ttf in Resources */,
+				D10AD89C280EF82B00F6C9CC /* Geliat-Regular.ttf in Resources */,
+				D10AD8B5280F1DF300F6C9CC /* Geliat-Black.ttf in Resources */,
+				D10AD8B1280F1DF300F6C9CC /* Berka-ExtraBold.ttf in Resources */,
+				D10AD8AA280F1DED00F6C9CC /* Berka-Regular.ttf in Resources */,
+				D143CC8028119DD000FD6D4E /* Geliat-Bold.ttf in Resources */,
+				D10AD8B4280F1DF300F6C9CC /* Berka-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +397,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10AD8A0280EF82F00F6C9CC /* Berka-Bold.ttf in Resources */,
+				D10AD8B7280F1DF300F6C9CC /* Genera-Grotesk-Light.ttf in Resources */,
+				D10AD8B8280F1DF300F6C9CC /* Genera-Grotesk-Heavy.ttf in Resources */,
+				D10AD89D280EF82B00F6C9CC /* Geliat-Regular.ttf in Resources */,
+				D10AD8BA280F1DF300F6C9CC /* Geliat-Black.ttf in Resources */,
+				D10AD8B6280F1DF300F6C9CC /* Berka-ExtraBold.ttf in Resources */,
+				D10AD8AB280F1DEE00F6C9CC /* Berka-Regular.ttf in Resources */,
+				D143CC8128119DD000FD6D4E /* Geliat-Bold.ttf in Resources */,
+				D10AD8B9280F1DF300F6C9CC /* Berka-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +556,7 @@
 				D1A55CF827ECC16400AB5406 /* extraCode.swift in Sources */,
 				D1D5FC0027ECB2CB00CD7E55 /* ViewController.swift in Sources */,
 				D1D5FBFC27ECB2CB00CD7E55 /* AppDelegate.swift in Sources */,
+				D10AD8A2280EFAA100F6C9CC /* KashIntro.swift in Sources */,
 				D1D5FC6C27ECB9B500CD7E55 /* SignIn-ViewController.swift in Sources */,
 				D1D5FBFE27ECB2CB00CD7E55 /* SceneDelegate.swift in Sources */,
 			);
@@ -648,8 +732,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D6570A20FBE7F6F48E382B5 /* Pods-finance.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M9D5379H93;
@@ -658,6 +743,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -677,8 +763,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AE2DC28FD9A7365D20516E7 /* Pods-finance.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M9D5379H93;
@@ -687,6 +774,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

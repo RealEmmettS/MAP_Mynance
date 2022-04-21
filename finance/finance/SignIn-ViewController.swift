@@ -22,8 +22,13 @@ var currentUser:financeUser = financeUser(id: "", fullName: "", firstName: "", l
 
 class SignIn_ViewController: UIViewController, FUIAuthDelegate {
     
+    @IBOutlet weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        button.titleLabel?.font =  UIFont(name: "Geliat-Regular", size: 17)
+        
     }
     
     //MARK: viewDidAppear
@@ -70,6 +75,8 @@ class SignIn_ViewController: UIViewController, FUIAuthDelegate {
             guard let user = Auth.auth().currentUser else {return}
             currentUser.id = user.uid
             currentUser.fullName = user.displayName ?? ""
+            currentUser.email = user.email ?? ""
+            currentUser.uploadToCloud()
             performSegue(withIdentifier: "movePastSignIn", sender: nil)
         }else{
             print("\n\n –– error –– \n\n")
@@ -152,6 +159,7 @@ class SignIn_ViewController: UIViewController, FUIAuthDelegate {
         } catch {
             print("Uh-Oh")
         }
+        
     }
     
     

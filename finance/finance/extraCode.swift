@@ -60,6 +60,7 @@ struct financeUser{
         self.firstName = ""
         self.lastName = ""
         self.email = ""
+        self.financeData = []
     }
 }
 
