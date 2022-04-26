@@ -27,10 +27,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    
-    ///Stores the processed data retrieved from Firebase. Automatically updates when new data is detected. See the "Auto-Retrieve Data" mark to observe the auto-updating procedure.
+    //MARK: tableContent Array
+    ///Stores the processed data retrieved from Firebase. Automatically updates and sorts (by date; newest first) when new data is detected. See the "Auto-Retrieve Data" mark to observe the auto-updating procedure.
     var tableContent: [ processed ] = [] {
         didSet{
+            //Sorts transactions by date (newest first)
+            tableContent = tableContent.sorted(by: { $0.Date.compare($1.Date) == .orderedDescending })
+            
+            //reloads to tableView to reflect changes
             table.reloadData()
         }
     }
@@ -133,6 +137,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     //MARK: Add New Transaction
+    ///Displays an alert which takes a String and Double. This data, upon hitting submit, uploads this data to Firebase and reloads to tableView to reflect changes
     @IBAction func addNewTransactionPressed(_ sender: Any) {
         
         let alert = UIAlertController(title: "Submit New Transaction", message: "", preferredStyle: .alert)
@@ -211,7 +216,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         
-        let type = tableContent[indexPath.row].type
+//        let type = tableContent[indexPath.row].type
 //        switch type{
 //        case "food": cell.imageView?.image = UIImage(named: "donut")
 //        case "service": cell.imageView?.image = UIImage(named: "Users")

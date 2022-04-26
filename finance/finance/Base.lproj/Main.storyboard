@@ -126,6 +126,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ig-lw-8JP" userLabel="redBackground">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="236"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zZB-fr-7OG">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="236"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNv-IQ-kh1">
                                         <rect key="frame" x="380" y="127.66666666666669" width="28" height="28"/>
                                         <constraints>
@@ -141,9 +144,6 @@
                                             <action selector="signOutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DjQ-1A-ing"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zZB-fr-7OG">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="236"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.60784313729999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>

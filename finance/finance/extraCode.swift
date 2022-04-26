@@ -97,6 +97,7 @@ func uploadFinanceData(){
     }
 }
 
+//MARK: Transaction Struct
 struct processed{
     var name:String
     var amount:Double
